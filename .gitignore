@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+data/tramites.csv
+.pytest_cache/
