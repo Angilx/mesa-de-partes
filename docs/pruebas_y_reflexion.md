@@ -41,20 +41,20 @@ original:
 
  - ¿Qué fue lo más difícil o lo que aprendí?
 
- -Pasar de 5 arreglos separados a una lista de diccionarios.
- -Trabajar con varios archivos (módulos) y hacer que se importen     entre  sí.
+   -Pasar de 5 arreglos separados a una lista de diccionarios.
+   -Trabajar con varios archivos (módulos) y hacer que se importen     entre  sí.
 
  - ¿Qué ventaja tuvo separar el código en módulos?
 
--Cada archivo tiene una sola responsabilidad (validar, guardar, mostrar menú).
--ude probar la lógica sin escribir datos a mano, con las pruebas automáticas.
--Si hay un error de DNI, sé que debo buscarlo en validaciones.py.
+   -Cada archivo tiene una sola responsabilidad (validar, guardar, mostrar menú).
+   -Poder probar la lógica sin escribir datos a mano, con las pruebas automáticas.
+   -Si hay un error de DNI, sé que debo buscarlo en (validaciones.py).
 
 **Reflexión ética**
 
-* Al diseñar este sistema se tuvo presente que detrás de cada fila de tramites.csv hay una persona que espera un trámite importante para ella. Por eso se buscó que el programa fuera cuidadoso desde el inicio. Se guardaron solo los datos necesarios (código, DNI, nombre, tipo y estado), de modo que cada estudiante entrega lo mínimo para ser atendido. Se incluyeron validaciones para evitar que se registren datos incorrectos, y los trámites quedan guardados en el archivo, por lo que ninguno se pierde al cerrar el programa y cada estudiante puede consultar el estado del suyo con su código. *
+ * Al diseñar este sistema se tuvo presente que detrás de cada fila de tramites.csv hay una persona que espera un trámite importante para ella. Por eso se buscó que el programa fuera cuidadoso desde el inicio. Se guardaron solo los datos necesarios (código, DNI, nombre, tipo y estado), de modo que cada estudiante entrega lo mínimo para ser atendido. Se incluyeron validaciones para evitar que se registren datos incorrectos, y los trámites quedan guardados en el archivo, por lo que ninguno se pierde al cerrar el programa y cada estudiante puede consultar el estado del suyo con su código. 
  
 
 **Conocimiento nuevo que incorporé**
 
-- * Con este proyecto se aprendió a trasladar un algoritmo de PSeInt a Python y a organizarlo en módulos, donde cada archivo cumple una función clara. Se incorporó el uso de listas y diccionarios para que cada trámite conserve sus datos juntos, y el trabajo con archivos CSV para que la información no se pierda al cerrar el programa. También se aprendió a validar datos y a escribir pruebas automáticas, que permiten comprobar que el sistema funciona y detectar errores a tiempo. Finalmente, con Git y GitHub se aprendió a registrar el avance mediante commits, de modo que el historial muestra el camino recorrido desde un algoritmo inicial hasta un proyecto completo y verificable. *
+ * Con este proyecto se aprendió a trasladar un algoritmo de PSeInt a Python y a organizarlo en módulos, donde cada archivo cumple una función clara. Se incorporó el uso de listas y diccionarios para que cada trámite conserve sus datos juntos, y el trabajo con archivos CSV para que la información no se pierda al cerrar el programa. También se aprendió a validar datos y a escribir pruebas automáticas, que permiten comprobar que el sistema funciona y detectar errores a tiempo. Finalmente, con Git y GitHub se aprendió a registrar el avance mediante commits, de modo que el historial muestra el camino recorrido desde un algoritmo inicial hasta un proyecto completo y verificable. 
