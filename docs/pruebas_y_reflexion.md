@@ -15,10 +15,10 @@ tildes, ñ y comas, y filas corruptas).
 
 | N.º | Dato observado (entrada) | Resultado esperado | Resultado obtenido |
 |---|---|---|---|
-| 1 | DNI : ( 64821001 ) , "Ana Pérez", Matrícula | Se registra con código NR-01, estado Recibido | "En aprobación" |
+| 1 | DNI : ( 64821001 ) , "Ana Pérez", Matrículado | Se registra con código NR-01, estado Recibido | "En aprobación" |
 | 2 | DNI de 7 dígitos | "Datos inválidos" | "Error" |
 | 3 | Código inexistente en búsqueda | "Código no existe" | "Codigo no existe" |
-| 4 | DNI : ( 63711047 ) , "Piero Huaman", Maricula | Se registra con codigo NR-02, estado en | |
+| 4 | DNI : ( 63711047 ) , "Piero Huaman", Mariculado | Se registra con codigo NR-02, estado en aprobacion | Aprobado |
 | 5 | Código: TR-1, Nuevo estado:Entregado | Mensaje: "Estado actualizado" | Correcto . El archivo se actualizó. |
 
 ### Errores detectados y corregidos
