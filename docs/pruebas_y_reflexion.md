@@ -14,11 +14,11 @@ tildes, ñ y comas, y filas corruptas).
 ## 2. Pruebas con datos reales de la observación de campo
 
 | N.º | Dato observado (entrada) | Resultado esperado | Resultado obtenido |
-|---|---|---|---|---|
+|---|---|---|---|
 | 1 | DNI : ( 64821001 ) , "Ana Pérez", Matrícula | Se registra con código NR-01, estado Recibido | "En aprobación" |
-| 2 |  DNI de 7 dígitos | "Datos inválidos" | "Error" | 
-| 3 |  Código inexistente en búsqueda | "Código no existe" | "Codigo no existe" | 
-| 4 | DNI : ( 63711047 )  , "Piero Huaman", Maricula | Se registra con codigo NR-02, estado en | | |
+| 2 | DNI de 7 dígitos | "Datos inválidos" | "Error" |
+| 3 | Código inexistente en búsqueda | "Código no existe" | "Codigo no existe" |
+| 4 | DNI : ( 63711047 ) , "Piero Huaman", Maricula | Se registra con codigo NR-02, estado en | |
 | 5 | Código: TR-1, Nuevo estado:Entregado | Mensaje: "Estado actualizado" | Correcto . El archivo se actualizó. |
 
 ### Errores detectados y corregidos
