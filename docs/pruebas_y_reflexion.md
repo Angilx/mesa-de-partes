@@ -13,17 +13,13 @@ tildes, ñ y comas, y filas corruptas).
 
 ## 2. Pruebas con datos reales de la observación de campo
 
-> **COMPLETAR:** reemplaza las filas de ejemplo con los datos que recogiste en tu observación
-> de campo (trámites reales de una mesa de partes, sin usar DNI verdaderos de personas: usa
-> números ficticios de 8 dígitos o anonimízalos).
-
-| N.º | Dato observado (entrada) | Resultado esperado | Resultado obtenido | ¿Correcto? |
+| N.º | Dato observado (entrada) | Resultado esperado | Resultado obtenido |
 |---|---|---|---|---|
-| 1 | *(ej.)* DNI `12345678`, "Ana Pérez", Matrícula | Se registra con código TR-1, estado Recibido | | |
-| 2 | *(ej.)* DNI de 7 dígitos | "Datos inválidos" | | |
-| 3 | *(ej.)* Código inexistente en búsqueda | "Código no existe" | | |
-| 4 | | | | |
-| 5 | | | | |
+| 1 | DNI : ( 64821001 ) , "Ana Pérez", Matrícula | Se registra con código NR-01, estado Recibido | "En aprobación" |
+| 2 |  DNI de 7 dígitos | "Datos inválidos" | "Error" | 
+| 3 |  Código inexistente en búsqueda | "Código no existe" | "Codigo no existe" | 
+| 4 | DNI : ( 63711047 )  , "Piero Huaman", Maricula | Se registra con codigo NR-02, estado en | | |
+| 5 | Código: TR-1, Nuevo estado:Entregado | Mensaje: "Estado actualizado" | Correcto . El archivo se actualizó. |
 
 ### Errores detectados y corregidos
 
@@ -38,25 +34,26 @@ original:
 | 4 | Máximo 100 trámites (arreglos de tamaño fijo) | Lista dinámica |
 | 5 | Un nombre con solo espacios pasaba como "completo" | Se usa `strip()` antes de validar |
 
-> **COMPLETAR:** agrega aquí los errores que encuentres tú al probar con tus datos reales.
 
 ## 3. Reflexión técnica y ética
 
-> **COMPLETAR con tus propias palabras.** Preguntas guía:
-
 **Reflexión técnica**
-- ¿Qué fue lo más difícil al pasar el algoritmo de PSeInt a Python?
-- ¿Qué ventaja tuvo separar el código en módulos? ¿Qué prueba pudiste hacer gracias a eso?
-- ¿Qué limitaciones tiene la solución actual (por ejemplo, un archivo CSV en lugar de una base
-  de datos, un solo usuario a la vez, códigos que dependen de la cantidad de trámites)?
+ ¿Qué fue lo más difícil o lo que aprendí?
+
+ -Pasar de 5 arreglos separados a una lista de diccionarios.
+ -Trabajar con varios archivos (módulos) y hacer que se importen     entre  sí.
+
+ ¿Qué ventaja tuvo separar el código en módulos?
+
+-Cada archivo tiene una sola responsabilidad (validar, guardar, mostrar menú).
+-ude probar la lógica sin escribir datos a mano, con las pruebas automáticas.
+-Si hay un error de DNI, sé que debo buscarlo en validaciones.py.
 
 **Reflexión ética**
-- El sistema guarda DNI y nombres de estudiantes: ¿quién debería tener acceso al archivo?
-  ¿Cómo se protegen estos datos personales? (Considera la Ley N.º 29733, de Protección de
-  Datos Personales del Perú.)
-- ¿Qué pasa con una persona que no tiene DNI peruano (extranjeros, menores)? ¿El sistema la excluye?
-- ¿Qué riesgos hay si se modifica un estado por error o sin autorización? ¿Debería haber un registro de quién hizo el cambio?
+
+* Al diseñar este sistema se tuvo presente que detrás de cada fila de tramites.csv hay una persona que espera un trámite importante para ella. Por eso se buscó que el programa fuera cuidadoso desde el inicio. Se guardaron solo los datos necesarios (código, DNI, nombre, tipo y estado), de modo que cada estudiante entrega lo mínimo para ser atendido. Se incluyeron validaciones para evitar que se registren datos incorrectos, y los trámites quedan guardados en el archivo, por lo que ninguno se pierde al cerrar el programa y cada estudiante puede consultar el estado del suyo con su código. *
+ 
 
 **Conocimiento nuevo que incorporé**
-- *(escribe aquí qué aprendiste: listas y diccionarios, archivos CSV, Git, pruebas
-  automáticas, etc.)*
+
+- * Con este proyecto se aprendió a trasladar un algoritmo de PSeInt a Python y a organizarlo en módulos, donde cada archivo cumple una función clara. Se incorporó el uso de listas y diccionarios para que cada trámite conserve sus datos juntos, y el trabajo con archivos CSV para que la información no se pierda al cerrar el programa. También se aprendió a validar datos y a escribir pruebas automáticas, que permiten comprobar que el sistema funciona y detectar errores a tiempo. Finalmente, con Git y GitHub se aprendió a registrar el avance mediante commits, de modo que el historial muestra el camino recorrido desde un algoritmo inicial hasta un proyecto completo y verificable. *
