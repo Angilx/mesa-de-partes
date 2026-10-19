@@ -1,6 +1,7 @@
 """Validaciones de datos para el sistema de Mesa de Partes."""
 
 ESTADOS_VALIDOS = ("Recibido", "En revisión", "Entregado")
+LONGITUD_DNI = 8
 
 
 def es_digito(c):
@@ -14,7 +15,7 @@ def es_digito(c):
 
 def validar_dni(dni):
     """Un DNI es válido si tiene exactamente 8 caracteres y todos son dígitos."""
-    if len(dni) != 8:
+    if len(dni) != LONGITUD_DNI:
         return False
     for c in dni:
         if not es_digito(c):
