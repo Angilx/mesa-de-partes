@@ -19,6 +19,17 @@ def generar_codigo(n):
     return "TR-" + str(n)
 
 
+def siguiente_numero(tramites):
+    """Devuelve el próximo número de código (el mayor existente + 1)."""
+    mayor = 0
+    for t in tramites:
+        try:
+            mayor = max(mayor, int(t["codigo"].split("-")[1]))
+        except (IndexError, ValueError):
+            pass
+    return mayor + 1
+
+
 def registrar_tramite(tramites, dni, nombre, op):
     """Registra un trámite nuevo.
 
@@ -26,9 +37,8 @@ def registrar_tramite(tramites, dni, nombre, op):
     """
     tipo = nombre_tipo(op)
     if validar_dni(dni) and campos_completos(nombre, tipo):
-        codigo = generar_codigo(len(tramites) + 1)
-        def siguiente_numero(tramites):
-         tramites.append({
+        codigo = generar_codigo(siguiente_numero(tramites))
+        tramites.append({
             "codigo": codigo,
             "dni": dni,
             "nombre": nombre.strip(),
@@ -37,7 +47,6 @@ def registrar_tramite(tramites, dni, nombre, op):
         })
         return codigo
     return None
-
 
 def buscar_por_codigo(tramites, codigo):
     """Devuelve el trámite con ese código, o None si no existe."""
