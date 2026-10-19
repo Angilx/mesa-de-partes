@@ -29,7 +29,7 @@ def cargar_tramites(ruta=RUTA_POR_DEFECTO):
     tramites = []
     if not os.path.exists(ruta):
         return tramites
-    with open(ruta, newline="", encoding="utf-8") as archivo:
+    with open(ruta, newline="", encoding="utf-8-sig") as archivo:
         for fila in csv.DictReader(archivo):
             if validar_dni(fila.get("dni", "")) and validar_estado(fila.get("estado", "")):
                 tramites.append({campo: fila[campo] for campo in CAMPOS})
