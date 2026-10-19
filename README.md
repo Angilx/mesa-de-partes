@@ -5,7 +5,7 @@ Sistema de consola en Python para registrar y dar seguimiento a trámites de est
 (`docs/MesaDePartes_base.psc`).
 
 ## Requisitos
-- Python 3.8 o superior (no necesita librerías externas)
+- Python 3.8 o superior (sin necesidad de librerías externas)
 
 ## Uso
 ```
