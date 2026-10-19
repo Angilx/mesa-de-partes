@@ -60,7 +60,7 @@ def opcion_listar(tramites):
 
 def opcion_cambiar_estado(tramites):
     codigo = input("Ingrese el código: ")
-    nuevo = input("Nuevo estado (En revisión / Entregado): ").strip()
+    nuevo = input("Nuevo estado (Recibido / En revisión / Entregado): ").strip()
     resultado = cambiar_estado(tramites, codigo, nuevo)
     if resultado == "ok":
         print("Estado actualizado")
