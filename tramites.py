@@ -27,7 +27,8 @@ def registrar_tramite(tramites, dni, nombre, op):
     tipo = nombre_tipo(op)
     if validar_dni(dni) and campos_completos(nombre, tipo):
         codigo = generar_codigo(len(tramites) + 1)
-        tramites.append({
+        def siguiente_numero(tramites):
+         tramites.append({
             "codigo": codigo,
             "dni": dni,
             "nombre": nombre.strip(),
@@ -66,6 +67,6 @@ def calcular_estadisticas(tramites):
     for estado in ESTADOS_VALIDOS:
         conteo[estado] = 0
     for t in tramites:
-        if t["estado"] in conteo:
+        if t["estado"] in ESTADOS_VALIDOS:
             conteo[t["estado"]] += 1
     return conteo
