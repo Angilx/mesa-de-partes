@@ -15,11 +15,11 @@ tildes, ñ y comas, y filas corruptas).
 
 | N.º | Dato observado (entrada) | Resultado esperado | Resultado obtenido |
 |---|---|---|---|
-| 1 | DNI : ( 64821001 ) , "Ana Pérez", Matrículado | Se registra con código TR-01, estado Recibido | "En aprobación" |
-| 2 | DNI de 7 dígitos | "Datos inválidos" | "Error" |
-| 3 | Código inexistente en búsqueda | "Código no existe" | "Codigo no existe" |
-| 4 | DNI : ( 63711047 ) , "Piero Huaman", Mariculado | Se registra con codigo TR-02, estado en aprobacion | Aprobado |
-| 5 | Código: TR-1, Nuevo estado:Entregado | Mensaje: "Estado actualizado" | Correcto . El archivo se actualizó. |
+| 1 | DNI : ( 64821001 ) , "Ana Pérez", Matrículado | Se registra con código TR-01, estado Recibido | "Recibido" |
+| 2 | DNI de 7 dígitos | "Datos inválidos" | "Datos invalidos" |
+| 3 | Código inexistente en búsqueda:(TR-99) | "Código no existe" | "Codigo no existe" |
+| 4 | DNI : ( 63711047 ) , "Piero Huaman", Mariculado | Código: TR-2 y estado Recibido en la lista | Recibido |
+| 5 | Código: TR-1, Nuevo estado:Entregado | Mensaje: "Estado actualizado" | TR-1 ... Entregado . |
 
 ### Errores detectados y corregidos
 
