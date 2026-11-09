@@ -30,6 +30,7 @@ def siguiente_numero(tramites):
     return mayor + 1
 
 
+
 def registrar_tramite(tramites, dni, nombre, op):
     """Registra un trámite nuevo.
 
@@ -47,6 +48,7 @@ def registrar_tramite(tramites, dni, nombre, op):
         })
         return codigo
     return None
+    
 
 def buscar_por_codigo(tramites, codigo):
     """Devuelve el trámite con ese código, o None si no existe."""
