@@ -15,12 +15,11 @@ def es_digito(c):
 
 def validar_dni(dni):
     """Un DNI es válido si tiene exactamente 8 caracteres y todos son dígitos."""
-    if len(dni) != LONGITUD_DNI:
-        return False
-    for c in dni:
-        if not es_digito(c):
-            return False
-    return True
+    while True:
+        dni = input("Ingrese su dni (Solo 8 digitos) : ").strip()
+        if len(dni) == LONGITUD_DNI and all(es_digito(c)for c in dni):
+            return dni
+        print("[ERROR] EL DNI DEBE TENER SOLO 8 DIGITOS. INTENTELO DE NUEVO.\n")
 
 
 def campos_completos(nombre, tipo):
