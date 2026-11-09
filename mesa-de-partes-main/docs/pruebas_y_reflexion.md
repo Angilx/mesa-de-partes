@@ -38,12 +38,11 @@ original:
 ## 3. Reflexión técnica y ética
 
 **Reflexión técnica**
-
  - ¿Qué fue lo más difícil o lo que aprendí?
 
-   -Pasar de 5 arreglos separados a una lista de diccionarios.
+   -Pasar de 5 (arreglos) separados a una lista de diccionarios.
 
-   -Trabajar con varios archivos (módulos) y hacer que se importen     entre  sí.
+   -Trabajar con varios archivos (módulos) y hacer que se importen entre  sí.
 
  - ¿Qué ventaja tuvo separar el código en módulos?
 
